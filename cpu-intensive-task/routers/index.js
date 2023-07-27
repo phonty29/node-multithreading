@@ -11,7 +11,11 @@ const router = (req, res) => {
             cpuController(req, res);
             break;
         default: 
-            errorController(req, res);
+            res.writeHead(404, {
+                'Content-Type': 'application/json'
+            });
+            res.write(JSON.stringify({detail: 'Resource not found'}));
+            res.end();
     }
 }
 
