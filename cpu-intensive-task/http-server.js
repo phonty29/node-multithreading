@@ -1,14 +1,9 @@
 const http = require('http');
+const { router } = require('./routers')
 
 const port = process.env.PORT || 8080;
 
-const server = http.createServer((req,res) => {
-    res.writeHead(200, {
-        'Content-Type': 'application/json'
-    });
-    res.write('Hello Browser, I am a Node server');
-    res.end();
-});
+const server = http.createServer(router);
 
 server.listen(port, () => {
     console.log(`Server started at ${port}`);
