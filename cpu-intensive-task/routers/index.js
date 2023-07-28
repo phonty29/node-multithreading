@@ -2,6 +2,7 @@ const { messageController } = require('../controllers/message');
 const { cpuController } = require('../controllers/cpu-intensive-task');
 
 const router = (req, res) => {
+    console.dir(req);
     const url = req.url;
     switch(url) {
         case '/api/message':

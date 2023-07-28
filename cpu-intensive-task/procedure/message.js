@@ -7,7 +7,7 @@ class Message {
     }
 
     static getMessage(req, res) {
-        this.#sendResponse(res, 'Э котакбас бля амынды шыгарам пидарас');
+        this.#sendResponse(res, 'Э котакбас э бля сука амынды шыгарам мал');
 
     }
 
