@@ -4,7 +4,7 @@ const sumSquaredController = (req, res) => {
     const method = req.method;
     switch(method) {
         case "GET":
-            SumSquared.getComputation(req, res);
+            SumSquared.getComputationWithThreads(req, res);
             break;
         default:
             res.writeHead(405, {

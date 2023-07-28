@@ -1,6 +1,5 @@
 const threads = require('worker_threads');
 
-const thread_amount = threads.workerData.thread_amount;
 const start_index = threads.workerData.start_index;
 const end_index = threads.workerData.end_index;
 const sum = {value: 0};
