@@ -1,6 +1,10 @@
 const threads = require('worker_threads');
 
-console.log("I am worker, and my workerData is", threads.workerData);
+const num = threads.workerData.number;
+const sum = {value: 0};
+for (let i = 1; i<=num; i++) {
+    sum.value+= i**2; 
+}
 
-threads.parentPort.postMessage("I am worker, and here is my pessage to parent");
+threads.parentPort.postMessage({sum});
 

@@ -1,5 +1,5 @@
 const { messageController } = require('../controllers/message');
-const { cpuController } = require('../controllers/cpu-intensive-task');
+const { sumSquaredController } = require('../controllers/sum-squared');
 const { getDynamicRoute } = require('../utils/handleDynamicRoutes');
 
 const router = (req, res) => {
@@ -8,8 +8,8 @@ const router = (req, res) => {
         case '/api/message':
             messageController(req, res);
             break;
-        case '/api/cpu-intensive-task/:n':
-            cpuController(req, res);
+        case '/api/sum-squared/:n':
+            sumSquaredController(req, res);
             break;
         default: 
             res.writeHead(404, {

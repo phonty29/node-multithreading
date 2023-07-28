@@ -4,10 +4,10 @@ const { Worker } = threads;
 
 const worker = new Worker('./threads/worker.js', {
     workerData: {
-        message: 'Hello from parent to worker'
+        number: 10 
     }
 });
 
 worker.on('message', (...args) => {
-    console.log({args});
+    console.log(args[0].sum.value);
 });

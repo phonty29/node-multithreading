@@ -1,10 +1,10 @@
-const { CPU } = require('../procedure/cpu-intensive-task');
+const { SumSquared } = require('../procedure/sum-squared');
 
-const cpuController = (req, res) => {
+const sumSquaredController = (req, res) => {
     const method = req.method;
     switch(method) {
         case "GET":
-            CPU.getComputation(req, res);
+            SumSquared.getComputation(req, res);
             break;
         default:
             res.writeHead(405, {
@@ -15,4 +15,4 @@ const cpuController = (req, res) => {
     }
 }
 
-module.exports = { cpuController };
+module.exports = { sumSquaredController };
