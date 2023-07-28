@@ -4,6 +4,7 @@ class Message {
             'Content-Type': 'application/json'
         });
         res.write(JSON.stringify({message}));
+        res.end();
     }
 
     static getMessage(req, res) {

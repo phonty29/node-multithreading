@@ -1,14 +1,14 @@
 const { messageController } = require('../controllers/message');
 const { cpuController } = require('../controllers/cpu-intensive-task');
+const { getDynamicRoute } = require('../utils/handleDynamicRoutes');
 
 const router = (req, res) => {
-    console.dir(req);
     const url = req.url;
-    switch(url) {
+    switch(getDynamicRoute(url)) {
         case '/api/message':
             messageController(req, res);
             break;
-        case '/api/cpu-intensive-task':
+        case '/api/cpu-intensive-task/:n':
             cpuController(req, res);
             break;
         default: 

@@ -23,6 +23,6 @@ const messageController = (req, res) => {
             res.write(JSON.stringify({detail: 'Method not allowed'}));
             res.end();
     }
-};
+}
 
 module.exports = { messageController };
