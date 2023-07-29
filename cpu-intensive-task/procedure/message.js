@@ -8,7 +8,7 @@ class Message {
     }
 
     static getMessage(req, res) {
-        this.#sendResponse(res, 'Э котакбас э бля сука амынды шыгарам мал');
+        this.#sendResponse(res, 'Funny message');
 
     }
 
